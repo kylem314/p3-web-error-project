@@ -1,10 +1,10 @@
 # p3-web-error-project
 
 ## Information
-### Scrum Board
+**Scrum Board**
 [Scrum Board with log of weekly changes](https://github.com/kylem314/p3-web-error-project/projects/1)
 
-### Who We Are
+**Who We Are**
 
 aidanlin4: Aidan
 
@@ -16,7 +16,7 @@ kylem314: Kyle
 
 Calvin Ni: Calvin
 
-### Tickets
+**Tickets**
 
 | Aidan | James | Tyler | Kyle | Calvin |
 | :---: | :---: | :---: | :---: | :---: | 
