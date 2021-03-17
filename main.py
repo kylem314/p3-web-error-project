@@ -12,7 +12,21 @@ def home():
 def otherpage():
     return render_template('otherpage.html')
 
+@app.route('/a1')
+def a1():
+    return render_template('otherpage.html', test='a1')
 
+@app.route('/a2')
+def a2():
+    return render_template('otherpage.html', test='a2')
+
+@app.route('/a3')
+def a3():
+    return render_template('otherpage.html', test='a3')
+
+@app.route('/a4')
+def a4():
+    return render_template('otherpage.html', test='a4')
 
 
 
