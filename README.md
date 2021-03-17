@@ -7,9 +7,13 @@
 ### Who We Are
 
 aidanlin4: Aidan
+
 Bob1437: James
+
 TylerCloutier: Tyler
+
 kylem314: Kyle
+
 Calvin Ni: Calvin
 
 | Aidan | James | Tyler | Kyle | Calvin |
