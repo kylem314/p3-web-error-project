@@ -75,6 +75,8 @@ body {margin:0;;}
     <b>
         <a href="/">Home</a>
         <a class="active"  href="/otherpage">Otherpage</a>
+        <a  href="/movingimage">Moving Image</a>
+        <a href="/battleship" >Battleship</a>
     </b>
 </div>
 
@@ -91,26 +93,40 @@ body {margin:0;;}
         </form>
     </tr>
     <tr>
+        <form>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b4 /></th>
+        </form>
     </tr>
     <tr>
+        <form>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c4 /></th>
+        </form>
     </tr>
     <tr>
+        <form>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d4 /></th>
+        </form>
     </tr>
 
 </table>
 
-<h1> {{test}} </h1>
+<h1 style="z-index:0; position;absolute;"> {{test}} </h1>
+
+<img src="/static/movingimage.png" alt="Tug Boat"  style="width:6.25%;height:12.5%px;z-index: 0;position: absolute; margin-left:{{marginX}}%; margin-top:{{marginT}}%" >
+                                                                                                                    <!--         {{marginX}}             {{marginT}} -->
+
+<img src="/static/4x4battleshipgrid1.png" alt="Battle Ship Grid"  style="margin-left:25%; margin-right:25%; width:50%;z-index: -2;position: absolute;" >
+
+
+<!-- style="margin-left:37.5%; margin-right:37.5%; width:25%; margin-top:4%;z-index: -2;position: absolute;" -->
 </body>
 </html>

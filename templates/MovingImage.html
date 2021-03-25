@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Battleship Home</title>
- <!--   <link rel="stylesheet" href="static/home.css/"> -->
-
+    <title>Title</title>
 </head>
 <body>
+
 <style>
 
-body {margin:0;;}
+body {margin:0}
 
        .topnav {
   background-color: #333;
@@ -70,25 +69,31 @@ body {margin:0;;}
 }
 
 </style>
+
 <div class="topnav" >
     <b>
-        <a class="active" href="/">Home</a>
+        <a href="/">Home</a>
         <a href="/otherpage">Otherpage</a>
-        <a  href="/movingimage">Moving Image</a>
+        <a class="active" href="/movingimage">Moving Image</a>
         <a href="/battleship" >Battleship</a>
     </b>
 </div>
 
-<div class="text1">
-    <h1 style="color: #006103;" > <font size="+50"> BattleShip<i>-Online</i> </font>  </h1>
-</div>
+<p><a href="/boatright">
+    <img src="/static/arrows/rightarrow.png" alt="uparrow" style="width:6.25%;height:12.5%px;">
+</a></p>
 
-<video class="video-bg" loop muted autoplay >
-    <source  src="/static/ocean.mp4" type="video/mp4" >
-</video>
+<p><a href="/boatleft">
+    <img src="/static/arrows/leftarrow.png" alt="uparrow" style="width:6.25%;height:12.5%px;">
+</a></p>
 
+<!--- {% set margin2=110 %} -->
 
+<img src="/static/movingimage.png" alt="Tug Boat"  style="width:6.25%;height:12.5%px;margin-left:{{marginX}}px;margin-top:{{margin2}}px;z-index: 0;position: absolute;" >
 
+<img src="/static/movingimage.png" alt="Tug Boat"  style="width:12.5%;height:25%px;z-index: -1;position: relative;" >
 
+<p>There is a second larger boat to have the smaller boat go over the other image</p>
 </body>
+
 </html>
