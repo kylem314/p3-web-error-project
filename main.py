@@ -1,6 +1,10 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, Blueprint, url_for, request, redirect
+from login import login_bp
+from aidanminilab import aidanminilab_bp
 
 app = Flask(__name__)
+app.register_blueprint(login_bp, url_prefix='/login')
+app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
 
 
 #def margindef():
