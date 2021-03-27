@@ -1,0 +1,61 @@
+{% block title %}Flask Test - Login{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-image: url({{url_for('static', filename='img/userbg.jpg')}});
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+        div{
+        text-align: center;
+        }
+
+        #loginbox {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin-top: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #C5C4C4;
+            border-style: solid;
+            border-width: 3px;
+            border-height:300;
+            border-color: #444242;
+            border-radius: 25px;
+        }
+
+        #message {
+            margin-left: auto;
+            margin-right: auto;
+            text-align:center;
+            background-color: #C5C4C4;
+            margin-top: 2%;
+            width: 300px;
+            border-style: solid;
+            border-width: 3px;
+            border-height:300;
+            border-color: #444242;
+            border-radius: 25px;
+        }
+
+    </style>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<p id="message" class="lead">{{msg}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div id="loginbox">
+    <form action="#" method="post">
+        <p class="lead">Username:</p>
+        <p><input type="text" name="username" /></p>
+        <p class="lead">Password:</p>
+        <p><input type="text" name="password" /></p>
+        <p><input type="submit" value="submit" class="btn btn btn-dark"/></p>
+    </form>
+</div>
+{% endblock %}

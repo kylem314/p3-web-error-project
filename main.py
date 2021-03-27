@@ -1,4 +1,9 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, session, flash
+
+##import api
+import bulkofproject.billboardAPI as billboardAPI
+#import models
+import database
 
 app = Flask(__name__)
 
@@ -217,7 +222,57 @@ def d4():
     return render_template('otherpage.html', test='d4', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 
+#Login or Making New Accounts
+#---------------------------------------------------------
+@app.route('/login', methods = ['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        #query database and set up session
+        users = maindb.query.all()
+        session.pop('user_id', None)
+        session.permanent = True
 
+        #retrieve username and password from html
+        username = request.form['username']
+        password = request.form['password']
+
+        #check if username and password match
+        try:
+            user = [user for user in users if user.username == username][0]
+            #successful login
+            if user and user.password == password:
+                session['user'] = user.username
+                flash("You have been logged in")
+                return redirect(url_for('user'))
+            #incorrect username/password
+            else:
+                flash("User is incorrect or does not exist.")
+                return redirect(url_for('login'))
+        except:
+            flash("Password or Username is incorrect or does not exist.")
+            return redirect(url_for('login'))
+    else:
+        if 'user' in session:
+            flash("You are already logged in")
+            return redirect(url_for('user'))
+        return render_template('login.html', insession = False)
+
+@app.route('/register', methods = ['POST', 'GET'])
+def register():
+    if request.method == "POST":
+        #retrieve username and password from html
+        usr = request.form.get('username')
+        pw = request.form.get('password')
+        #commit username and password to database
+        dbcommit = maindb(username = usr, password = pw, song = "none", artist = "none")
+        db.session.add(dbcommit)
+        db.session.commit()
+        flash("New account successfully created")
+        #send user back to login
+        return redirect(url_for('login'))
+    #render template
+    flash("Create a new account")
+    return render_template('register.html', insession = False)
 
 #Start Webserver Here
 #---------------------------------------------------------
