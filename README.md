@@ -19,7 +19,7 @@ TylerCloutier: Tyler
 
 kylem314: Kyle
 
-statsprojectlol: Calvin
+statsprojectlol: [Calvin's commit map](https://github.com/statsprojectlol)
 
 **Tickets**
 
