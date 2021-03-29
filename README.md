@@ -19,6 +19,6 @@ Calvin Ni: Calvin
 
 **Tickets**
 
-| Aidan | James | Tyler | Kyle | Calvin |
+| Kyle | James | Tyler | Aiden | Calvin |
 | :---: | :---: | :---: | :---: | :---: | 
-| [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57450505) | link | link | link | link |
+| [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57450505) | link | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451796) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451796) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451412) |
