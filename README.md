@@ -21,4 +21,4 @@ Calvin Ni: Calvin
 
 | Aidan | James | Tyler | Kyle | Calvin |
 | :---: | :---: | :---: | :---: | :---: | 
-| link | link | link | link | link |
+| link[https://github.com/kylem314/p3-web-error-project/projects/1#card-57450505] | link | link | link | link |
