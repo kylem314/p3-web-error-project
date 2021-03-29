@@ -24,6 +24,12 @@ def home():
 def otherpage():
     return render_template('otherpage.html', test='Select A Square')
 
+#404 page
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html', body_class = 'page_404' ), 404
+
 @app.route('/movingimage')
 def movingimage():
     global marginx
