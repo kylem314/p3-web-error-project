@@ -1,7 +1,6 @@
 # p3-web-error-project
 
-Project Plan
-https://docs.google.com/document/d/1mxCPJsmhk86rFyu8uSxPnQBxzuSYuO-hp269rwPNfx8/edit
+[Project Plan](https://docs.google.com/document/d/1mxCPJsmhk86rFyu8uSxPnQBxzuSYuO-hp269rwPNfx8/edit)
 
 ## Sprint 1 Grading
 
