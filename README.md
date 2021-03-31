@@ -5,17 +5,14 @@ GitHub Repo for the Period 3 Web Error Team
 - [Project Plan](https://docs.google.com/document/d/1mxCPJsmhk86rFyu8uSxPnQBxzuSYuO-hp269rwPNfx8/edit)
 - [Runtime Link](https://76.176.107.1)
 
-**Who We Are**
-
-aidanlin4: Aidan
-
-Bob1437: James
-
-TylerCloutier: Tyler
-
-kylem314: Kyle
-
-statsprojectlol: [Calvin's commit map](https://github.com/statsprojectlol)
+# Creators & Heatmap Links
+NAME             | GITHUB Link |
+-------------    | --------------- |
+Tyler Cloutier | you guys need to put your heat maps here  |
+Kyle Myint | you guys need to put your heat maps here | 
+Aidan Lin | you guys need to put your heat maps here |
+James Hunt   | you guys need to put your heat maps here |
+Calvin Ni |https://github.com/statsprojectlol |
 
 **Tickets**
 
