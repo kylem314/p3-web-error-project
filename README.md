@@ -7,7 +7,7 @@ GitHub Repo for the Period 3 Web Error Team
 
 # Creators & Heatmap Links
 NAME             | GITHUB Link |
--------------    | --------------- |
+-------------    | -------------- |
 Tyler Cloutier | you guys need to put your heat maps here  |
 Kyle Myint | you guys need to put your heat maps here | 
 Aidan Lin | you guys need to put your heat maps here |
