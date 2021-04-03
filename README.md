@@ -9,7 +9,7 @@ GitHub Repo for the Period 3 Web Error Team
 NAME             | GITHUB Link |
 -------------    | -------------- |
 Tyler Cloutier | you guys need to put your heat maps here  |
-Kyle Myint | you guys need to put your heat maps here | 
+Kyle Myint | you guys need to put your heat maps hre | 
 Aidan Lin | you guys need to put your heat maps here |
 James Hunt   | you guys need to put your heat maps here |
 Calvin Ni |https://github.com/statsprojectlol |
