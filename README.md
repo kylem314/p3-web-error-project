@@ -1,4 +1,4 @@
-# P3 Web Error Gaming Site 
+# P3 Web Error Battleship Site 
 GitHub Repo for the Period 3 Web Error Team
 # Links
 - [Scrum Board with log of weekly changes](https://github.com/kylem314/p3-web-error-project/projects/1)
