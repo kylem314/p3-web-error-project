@@ -10,7 +10,7 @@ NAME             | GITHUB Link |
 -------------    | -------------- |
 Tyler Cloutier | you guys need to put your heat maps here  |
 Kyle Myint | you guys need to put your heat maps here | 
-Aidan Lin | you guys need to put your heat maps here |
+Aidan Lin | https://github.com/aidanlin4 |
 James Hunt   | you guys need to put your heat maps here |
 Calvin Ni |https://github.com/statsprojectlol |
 
