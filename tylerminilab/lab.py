@@ -1,27 +1,30 @@
-class Fibonacci:
-    """Initializer of class takes series parameter and returns Class Object"""
+import random
+"""List of heroes"""
+herolist1 = ["Spider-Man", "Captain America", "Iron Man", "The Hulk", "Thor", "Antman", "Black Widow", "Deadpool", "Wolverine", "Black Panther", "Star Lord", "Hawkeye"]
+
+"""Algorithm of selecting heroes in a class"""
+class Marvel:
+    """Initializer of class takes series parameter and returns class objects"""
     def __init__(self, series):
+
         """Built in validation and exception"""
-        if series < 2 or series > 100:
-            raise ValueError("Series must be between 2 and 100")
+        if series < 0 or series > 11:
+            raise ValueError('Series has to be between 1 and 11')
         self._series = series
         self._list = []
         self._dict = {}
         self._dictID = 0
-        # Duration timeElapsed;
-        # Instant start = Instant.now();  // time capture -- start
-        self.calc_series()
-        # Instant end = Instant.now();    // time capture -- end
-        # this.timeElapsed = Duration.between(start, end);
+
+        self.hero_series()
 
     """Algorithm for building Fibonacci sequence, this id called from __init__"""
-    def calc_series(self):
+    def hero_series(self):
         limit = self._series
-        f = [0, 1]  # fibonacci starting array/list
+        f = [(random.sample((herolist1), k=self._series))]
         while limit > 0:
             self.set_data(f[0])
-            f = [f[1], f[0] + f[1]]
-            limit -= 1
+            f = [f[0]]
+            limit -= self.series
 
     """Method/Function to set Fibonacci data: list, dict, and dictID are instance variables of Class"""
     def set_data(self, num):
@@ -42,22 +45,13 @@ class Fibonacci:
     def number(self):
         return self._list[self._dictID - 1]
 
-    """Traditional Getter requires method access"""
     def get_sequence(self, nth):
         return self._dict[nth]
-
 
 # Tester Code
 if __name__ == "__main__":
     '''Value for testing'''
-    n = 20
+    a = 1
     '''Constructor of Class object'''
-    fibonacci = Fibonacci(n)
-
-    '''Using getters to obtain data from object'''
-    print(f"Fibonacci number for {n} = {fibonacci.number}")
-    print(f"Fibonacci series for {n} = {fibonacci.list}")
-
-    '''Using method to get data from object'''
-    for i in range(n):
-        print(f"Fibonacci sequence {i + 1} = {fibonacci.get_sequence(i)}")
+    heroes = Marvel(a/a)
+    print(f"A great superhero from Marvel is {heroes.list}")
