@@ -1,8 +1,6 @@
 class primeCheck:
 
     def __init__(self, input):
-        if input < 2 or input > 200:
-            raise ValueError("Range to check for primes and composites must be between 2 and 200, inclusive.")
         self._input = input
         self._primes = []
         self._composites = []
