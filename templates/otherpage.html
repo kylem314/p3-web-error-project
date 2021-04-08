@@ -87,6 +87,13 @@ body {margin:0;;}
     <input type="submit" value='Check Boats Health' formaction=hp>
 </form>
 
+{{HP}}
+
+<form>
+    <input type="submit" value='Check Boats Stats' formaction=stats>
+</form>
+
+{{stats}}
 
 <table>
 
@@ -135,7 +142,54 @@ body {margin:0;;}
 
 <!-- style="margin-left:37.5%; margin-right:37.5%; width:25%; margin-top:4%;z-index: -2;position: absolute;" -->
 
+<!--
+<pre>
+
+    <code>
+
+        class Battleship:
+
+    def __init__(self, damage, health, name):
+        self.Damage = damage
+        self.Health = health
+        self.Name = name
+       # return health
+
+    def get_health(self, health):
+        if health <= 0:
+            print('you died')
+        print(health)
+
+
+    def list_info(self):
+        print("Damage: " + self.Damage + " Health: " + str(self.Health) + " Name: " + self.Name)
+
+
+
+    def hp(self):
+        print(20)
+
+
+
+    </code>
+
+</pre>
+
+
+<pre>
+
+    <code>
+        b1 = Battleship('12', HP, 'Destroyer')
+
+    </code>
+
+</pre>
+
+
 {{HP}}
+
+-->
+
 
 </body>
 </html>

@@ -1,21 +1,26 @@
 from flask import Blueprint, render_template
 
-from jamesminilab.classb import Battleship, HP
+from jamesminilab.classb import Battleship, HP, BoatHealth, Boatstats
 
 Blueprints = Blueprint('blueprints', __name__, static_folder='static', template_folder='templates')
 
 Var2 = Battleship('12', HP, 'Destroyer')
 
-
-
+Boathealth = Var2.hp()
 
 
 
 
 @Blueprints.route('/hp')
 def hp():
+    info = []
+    info.append(Battleship('12', HP, 'Destroyer'))
     global Var2
-    return render_template('otherpage.html', HP = Var2)
+    return render_template('otherpage.html', HP = BoatHealth)
+
+@Blueprints.route('/stats')
+def stats():
+    return render_template('otherpage.html', stats = Boatstats)
 
 
 #A routes start here
