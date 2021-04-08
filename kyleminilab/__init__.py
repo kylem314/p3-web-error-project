@@ -8,5 +8,5 @@ kyleminilab_bp = Blueprint('kyleminilab', __name__,
 @kyleminilab_bp.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        return render_template("kyleminilab.html", Workouts=Workouts(int(request.form.get("series"))))
-    return render_template("kyleminilab.html", Workouts=Workouts(1))
+        return render_template("kyleminilab.html", Primes=primeCheck(int(request.form.get("input"))))
+    return render_template("kyleminilab.html", Primes=primeCheck(1))
