@@ -32,3 +32,7 @@ class primeCheck:
     @property
     def composites(self):
         return self._composites
+
+if __name__ == "__main__":
+    n = 1
+    primeCheck = primeCheck(1)
