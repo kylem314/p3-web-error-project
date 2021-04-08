@@ -22,6 +22,11 @@ class primeCheck:
                     else:
                         # If the checked number does not have a factor other than 1, append to prime list
                         self._primes.append(i)
+
+    @property
+    def count(self):
+        return self._input
+
     @property
     def primes(self):
         return self._primes
