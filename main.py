@@ -7,7 +7,7 @@ from blueprints import Blueprints
 
 app = Flask(__name__)
 app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
-
+app.register_blueprint(kyleminilab_bp, url_prefix='/kyleminilab')
 
 #def margindef():
 #    marginx=0
