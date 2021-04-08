@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from flask import request
-from kyleminilab.classes import classes
+from kyleminilab.classes import primeCheck
 
 kyleminilab_bp = Blueprint('kyleminilab', __name__,
                             template_folder='templates',)
