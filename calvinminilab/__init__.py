@@ -1,7 +1,12 @@
+from flask import Blueprint, render_template, request
+from calvinminilab.lab import Meat
 
-from flask import Blueprint, render_template
-calvinminilab_bp = Blueprint('calvinminilab', __name__, template_folder='templates',)
+tylerminilab_bp = Blueprint('tylerminilab', __name__,
+                            template_folder='templates',)
 
-@calvinminilab_bp.route('/')
+
+@calvinminilab_bp.route('/',methods=['GET', 'POST'])
 def index():
-    return render_template("calvinminilab.html")
+    if request.method == 'POST':
+        return render_template("calvinminilab.html", Meat =Meat(int(request.form.get("series"))))
+    return render_template("calvinminilab.html", Meat=Meat(1))
