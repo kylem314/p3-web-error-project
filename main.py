@@ -1,12 +1,13 @@
 from flask import Flask, render_template, url_for, request, redirect
 from aidanminilab import aidanminilab_bp
-
+from calvinminilab import calvinminilab_bp
 from blueprints import Blueprints
 
 
 
 app = Flask(__name__)
 app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
+app.register_blueprint(calvinminilab_bp, url_prefix='/calvinminilab')
 
 #def margindef():
 #    marginx=0

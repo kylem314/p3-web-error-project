@@ -1,36 +1,36 @@
-"""Fibonacci algorithm contained within a class """
+import random
 
 
-class Fibonacci:
-    """Initializer of class takes series parameter and returns Class Object"""
+meatlist = ["Pork", "Chicken", "Beef", "Mutton", "Lamb", "Buffalo", "Reindeer", "Moose", "Seal", "Goat", "Turkey", "Bear"]
+class Meat:
     def __init__(self, series):
-        """Built in validation and exception"""
-        if series < 2 or series > 100:
-            raise ValueError("Series must be between 2 and 100")
+        if series < 0 or series > 12:
+            raise ValueError("Series must be between 0 and 12")
         self._series = series
         self._list = []
         self._dict = {}
         self._dictID = 0
         # Duration timeElapsed;
         # Instant start = Instant.now();  // time capture -- start
-        self.calc_series()
+        self.meat_series()
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
 
-    """Algorithm for building Fibonacci sequence, this id called from __init__"""
-    def calc_series(self):
+    """Algorithm for building book series list, this id called from __init__"""
+    def meat_series(self):
         limit = self._series
-        f = [0, 1]  # fibonacci starting array/list
+        f = [(random.sample((meatlist), k= self._series))]
         while limit > 0:
             self.set_data(f[0])
-            f = [f[1], f[0] + f[1]]
-            limit -= 1
+            f = [f[0]]
+            limit -= self._series
 
-    """Method/Function to set Fibonacci data: list, dict, and dictID are instance variables of Class"""
+    """Method/Function to set data: list, dict, and dictID are instance variables of Class"""
     def set_data(self, num):
         self._list.append(num)
         self._dict[self._dictID] = self._list.copy()
         self._dictID += 1
+
 
     """Getters with decorator to allow . notation access"""
     @property
@@ -48,19 +48,10 @@ class Fibonacci:
     """Traditional Getter requires method access"""
     def get_sequence(self, nth):
         return self._dict[nth]
-
-
 # Tester Code
 if __name__ == "__main__":
     '''Value for testing'''
-    n = 20
+    a = 1
     '''Constructor of Class object'''
-    fibonacci = Fibonacci(n)
-
-    '''Using getters to obtain data from object'''
-    print(f"Fibonacci number for {n} = {fibonacci.number}")
-    print(f"Fibonacci series for {n} = {fibonacci.list}")
-
-    '''Using method to get data from object'''
-    for i in range(n):
-        print(f"Fibonacci sequence {i + 1} = {fibonacci.get_sequence(i)}")
+    Meat = Meat(a/a)
+    print(f"A great meat to try is {Meat.list}")

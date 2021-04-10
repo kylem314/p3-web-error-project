@@ -1,7 +1,8 @@
-from flask import Blueprint, render_template, request
-from calvinminilab.lab import Meat
+from flask import Blueprint, render_template
+from flask import request
+from calvinminilab.minilab import Meat
 
-tylerminilab_bp = Blueprint('tylerminilab', __name__,
+calvinminilab_bp = Blueprint('calvinminilab', __name__,
                             template_folder='templates',)
 
 
