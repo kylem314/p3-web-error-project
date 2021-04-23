@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from jamesminilab.classb import Battleship, HP, BoatHealth, Boatstats
+from minilabs.jamesminilab.classb import Battleship, HP, BoatHealth, Boatstats
 
 Blueprints = Blueprint('blueprints', __name__, static_folder='static', template_folder='templates')
 

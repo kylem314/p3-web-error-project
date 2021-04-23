@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from flask import request
-from aidanminilab.minilab import Workouts
+from minilabs.aidanminilab.minilab import Workouts
 
 aidanminilab_bp = Blueprint('aidanminilab', __name__,
                             template_folder='templates',)

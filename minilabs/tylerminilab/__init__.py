@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from tylerminilab.lab import Marvel
+from minilabs.tylerminilab.lab import Marvel
 tylerminilab_bp = Blueprint('tylerminilab', __name__,
                            template_folder='templates',)
 

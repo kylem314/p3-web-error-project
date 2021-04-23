@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from flask import request
-from kyleminilab import classes
+from minilabs.kyleminilab import classes
 
 kyleminilab_bp = Blueprint('kyleminilab', __name__,
                             template_folder='templates',)

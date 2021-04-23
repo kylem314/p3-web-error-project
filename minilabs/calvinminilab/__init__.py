@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from flask import request
-from calvinminilab.minilab import Meat
+from minilabs.calvinminilab.minilab import Meat
 
 calvinminilab_bp = Blueprint('calvinminilab', __name__,
                             template_folder='templates',)

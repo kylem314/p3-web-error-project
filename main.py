@@ -1,9 +1,9 @@
-from flask import Flask, render_template, url_for, request, redirect
-from aidanminilab import aidanminilab_bp
-from tylerminilab import tylerminilab_bp
-from jamesminilab import jamesminilab_bp
-from kyleminilab import kyleminilab_bp
-from calvinminilab import calvinminilab_bp
+from flask import Flask, render_template
+from minilabs.aidanminilab import aidanminilab_bp
+from minilabs.tylerminilab import tylerminilab_bp
+from minilabs.jamesminilab import jamesminilab_bp
+from minilabs.kyleminilab import kyleminilab_bp
+from minilabs.calvinminilab import calvinminilab_bp
 from blueprints import Blueprints
 
 
