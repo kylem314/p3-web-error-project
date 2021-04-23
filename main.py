@@ -80,6 +80,7 @@ def easter():
     return render_template('easter.html')
 
 
+
 #Blueprint for battleship grid----------------------
 #James's minilab
 
