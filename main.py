@@ -1,5 +1,8 @@
 from flask import Flask, render_template, url_for, request, redirect
 from aidanminilab import aidanminilab_bp
+from tylerminilab import tylerminilab_bp
+from jamesminilab import jamesminilab_bp
+from kyleminilab import kyleminilab_bp
 from calvinminilab import calvinminilab_bp
 from blueprints import Blueprints
 
@@ -8,6 +11,9 @@ from blueprints import Blueprints
 app = Flask(__name__)
 app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
 app.register_blueprint(calvinminilab_bp, url_prefix='/calvinminilab')
+app.register_blueprint(tylerminilab_bp, url_prefix='/tylerminilab')
+app.register_blueprint(jamesminilab_bp, url_prefix='/jamesminilab')
+app.register_blueprint(kyleminilab_bp, url_prefix='/kyleminilab_bp')
 
 #def margindef():
 #    marginx=0
@@ -46,6 +52,8 @@ def movingimage():
 
     return render_template('MovingImage.html')
 
+
+
 @app.route('/boatright')
 def boatright():
     global marginx
@@ -67,7 +75,9 @@ def boatleft():
 def battleship():
     return render_template('Battleship.html')
 
-
+@app.route('/easter')
+def easter():
+    return render_template('easter.html')
 
 
 #Blueprint for battleship grid----------------------
