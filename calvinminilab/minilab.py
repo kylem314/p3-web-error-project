@@ -51,7 +51,7 @@ class Meat:
 # Tester Code
 if __name__ == "__main__":
     '''Value for testing'''
-    a = 1
+    a = 0
     '''Constructor of Class object'''
     Meat = Meat(a/a)
     print(f"A great meat to try is {Meat.list}")
