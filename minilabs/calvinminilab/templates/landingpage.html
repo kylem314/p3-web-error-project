@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "easter.html" %}
+{{ super() }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Calvin{% endblock %}</title>
+</head>
+{% block content %}
+<body  style="margin-left: 15px">
+<h1>Calvin Mini Lab Location</h1>
+<a href="{{ url_for('calvinminilab.meatgrinder') }}">List Lab</a>
+<br>
+<a href="{{ url_for('calvinminilab.bubbleSort') }}">Bubble Sort Lab</a>
+</body>
+{% endblock %}
+</html>
