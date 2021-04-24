@@ -13,7 +13,7 @@ app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
 app.register_blueprint(calvinminilab_bp, url_prefix='/calvinminilab')
 app.register_blueprint(tylerminilab_bp, url_prefix='/tylerminilab')
 app.register_blueprint(jamesminilab_bp, url_prefix='/jamesminilab')
-app.register_blueprint(kyleminilab_bp, url_prefix='/kyleminilab_bp')
+app.register_blueprint(kyleminilab_bp, url_prefix='/kyleminilab')
 
 #def margindef():
 #    marginx=0
