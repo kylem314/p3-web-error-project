@@ -18,25 +18,22 @@ def meatgrinder():
 
 @calvinminilab_bp.route('/bubbleSort',methods = ["GET","POST"])
 def bubbleSort():
-    arr = []
-    isString = False
     if request.form:
-        string = request.form.get("string")
-        arr = string.split()
-        original = string.split()
-        if(request.form["select"] == "integer"):
-            try:
-                for j in range (0,len(arr)):
-                    arr[j] = int(arr[j])
-                for j in range (0,len(original)):
-                    original[j] = int(original[j])
-                return render_template("bubblesort.html",output_list = BubbleSort(arr,isString).OuputList,original_list = original)
-            except ValueError:
-                return render_template("bubblesort.html",output_list = "Can Only Contain String or Integer",original_list = "Error")
-        else:
-            try:
-                isString = True
-                return render_template("bubblesort",output_list = BubbleSort(arr,isString).OuputList,original_list = original)
-            except ValueError:
-                return render_template("bubblesort.html",output_list = "Can Only Contain String or Integer",original_list = "Error")
-    return render_template("bubblesort.html",output_list = BubbleSort(arr,isString).OuputList,original_list = arr)
+        all_list = []
+        b = 1 # to ensure first number is 0
+
+        newbox_counter = request.form.get('newbox_counter')
+        print('number of boxes added' +str(newbox_counter))
+
+        numberToItterate = 5 + int(newbox_counter)
+        # iterating through all of the form text fields input
+        for i in range(numberToItterate):
+            string_used = 'user_input' + str(b)
+            user_input = request.form.get(string_used)
+            all_list.append(int(user_input))
+            b = b + 1
+
+        print(all_list)
+        bubble = BubbleSort(all_list)
+        return render_template("bubblesort.html", output_list = bubble.OuputList)
+    return render_template("bubblesort.html")
