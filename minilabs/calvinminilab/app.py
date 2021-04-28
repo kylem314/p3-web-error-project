@@ -13,8 +13,8 @@ def index():
 @calvinminilab_bp.route('/meatgrinder',methods=['GET', 'POST'])
 def meatgrinder():
     if request.method == 'POST':
-        return render_template("calvinminilab.html", Meat =Meat(int(request.form.get("series"))))
-    return render_template("calvinminilab.html", Meat=Meat(1))
+        return render_template("meat.html", Meat =Meat(int(request.form.get("series"))))
+    return render_template("meat.html", Meat=Meat(1))
 
 @calvinminilab_bp.route('/bubbleSort',methods = ["GET","POST"])
 def bubbleSort():
