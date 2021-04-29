@@ -1,68 +1,148 @@
 <!DOCTYPE html>
 {% extends "easter.html" %}
 {{ super() }}
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}Calvin{% endblock %}</title>
+  <title>{% block title %}Bubble Sort{% endblock %}</title>
+
+  <style>
+    .single {
+      background-color: #6969AC;
+      color: white;
+    }
+  </style>
 </head>
+
 {% block content %}
-<h1 style="margin-left: 15px">Calvin Sort Location</h1>
 <div class="container">
 
   <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
     <!-- Title -->
     <div class="col-12" style="text-align: center;">
-      <h1><strong>BubbleSort</strong></h1>
+      <h1><strong>Bubble Sort</strong></h1>
+      <p>Objective is to never miss a conversion question on the AP practice test again</p>
     </div>
 
     <!-- Input and Content -->
     <div class="jumbotron text-center row">
-      <div class="col-md-6">
-        <h3>Sorting List</h3>
-        <form id="stringForm" action="/BubbleSort" method="POST" >
-          <input name="string" id="string" type="text">
-          <select id="select" name="select" required>
-            <option value="integer">Integer</option>
-            <option value="string">String</option>
-
-          </select>
-          <button>Go!</button>
-        </form>
+      <!-- Input -->
+      <!-- color pallet I am using: https://coolors.co/30292f-413f54-5f5aa2-355691-3f4045-->
+      <div class="col-md-5">
+        <div id="multi" style="background-color: #05556D">
+          <form action="{{ url_for('calvinminilab.bubblesort') }}" method="post">
+            <label style="color: #FFFFFF"><b>Input Numbers to Bubble Sort</b></label>
+            <g id="multi_input">
+              <input style="margin-bottom: 10px" name="user_input1" type="number">
+              <input style="margin-bottom: 10px" name="user_input2" type="number">
+              <input style="margin-bottom: 10px" name="user_input3" type="number">
+              <input style="margin-bottom: 10px" name="user_input4" type="number">
+              <input style="margin-bottom: 10px" name="user_input5" type="number">
+            </g>
+            <br>
+            <input type="button" id="button_add" value="Add">
+            <input type="button" id="button_minus" value="Minus" disabled>
+            <input type="number" id="newbox_counter" name="newbox_counter" hidden>
+            <input style="margin-bottom: 10px" type="submit" class="button" value="Submit">
+          </form>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h3>Output</h3>
-        <!-- Number, List table -->
-        <table class="mx-auto">
-          <tr>
-            <th scope="row">Modified List</th>
-          </tr>
-          <tr>
-            <td>{{output_list}}</td>
-          </tr>
-          <tr>
-            <th scope="row">Original List</th>
-          </tr>
-          <tr>
-            <td>{{original_list}}</td>
-          </tr>
-        </table>
+
+      <!-- Content-->
+      <!-- Color Pallet: https://coolors.co/313715-d16014-939f5c-bbce8a-e2f9b8-->
+
+
+      <div class="col-md-5">
+        <div style="background-color: #CD7F4D">
+          <h3>Output</h3>
+          <p>{{output_list}}</p>
+        </div>
       </div>
     </div>
-
   </div>
 
 </div>
-<div class="col-12" style="text-align: center;">
-  <h1><strong>WOW!</strong></h1>
 </div>
-<style>
-    table, td, th {
-        border: 1px solid var(--dblue);
+
+<script type="text/javascript">
+  var numbAddedBoxes = 4; //follows the already number of added boexes
+
+  var updateValue = document.getElementById("newbox_counter");
+  updateValue.value = 0;
+
+  var addButton = document.getElementById("button_add");
+  var minusButton = document.getElementById('button_minus');
+
+  const element_group = document.getElementById("multi_input"); //this is the group of the text boxes
+
+  function createExtra(){
+    for (i = 0; i < numbAddedBoxes; i++) {
+      new_box = document.createElement('input');
+      var idButton = "user_input" +String(i)
+      console.log("getting the new idName" + String(idButton))
+      new_box.setAttribute("id", idButton); //defining the id for the box
+      element_group.appendChild(new_box);
     }
-    td, th {
-        text-align:left;
+  }
+
+  function addBox() {
+    var i = numbAddedBoxes + 1
+    var idButton = "user_input" +String(i)
+
+    new_box = document.createElement('input');
+    new_box.type = 'number';
+    new_box.name = idButton;
+    new_box.style.marginBottom ='10px';
+
+    console.log("getting the new idName: " + String(idButton));
+    new_box.setAttribute("id", idButton); //defining the id for the box
+    element_group.appendChild(new_box);
+
+    updateValue.value = Number(updateValue.value) + Number(1);
+    console.log(updateValue.value)
+  }
+
+  function removeBox() {
+    //getting the id of the last box added
+    var i = numbAddedBoxes
+    var idRemove = "user_input" +String(i)
+    console.log("removing" + String(idRemove))
+    var removeButton = document.getElementById(idRemove)
+    //removing the box
+    //element_group.removeChild(removeButton);
+    removeButton.remove();
+    //var numbAddedBoxes = numbAddedBoxes - 1;
+  }
+
+  // listneres to add the number of text boxes
+  addButton.addEventListener("click", function(){
+    numbAddedBoxes = numbAddedBoxes + 1
+    console.log(numbAddedBoxes)
+    //createExtra()
+    addBox()
+  }, false);
+
+  // listners to minus the number of added buttons
+  minusButton.addEventListener('click', function(){
+    if ( numbAddedBoxes == 0 ){
+      // if the number of added boxes = 0 keep zero
+      numbAddedBoxes = 0
+    } else {
+      // if the number of added boxes is not zero then minus one
+      numbAddedBoxes = numbAddedBoxes - 1
+      console.log(numbAddedBoxes)
     }
-</style>
+    removeBox();
+    //createExtra();
+  }, false);
+
+  //creating the text box
+  // new_box = document.createElement('input');
+  // new_box.setAttribute("id", "user_input6"); //defining the id for the box
+
+  //element_group.appendChild(new_box); // adding new text box to the end of the group
+
+  //last_box = document.getElementById("user_input5");
+  //element.insertBefore(new_box,last_box);
+
+</script>
 {% endblock %}
-</html>
