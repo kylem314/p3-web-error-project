@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "easter.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bubble Sort{% endblock %}</title>
+
+    <style>
+        .single {
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+{% block content %}
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Number Sorter!</strong></h1>
+        </div>
+        <div>
+            <p style = "text-align: center; font-family: gilroy,serif">Is it hard for you to use your brain to sort numbers. Well now you can have a computer do it for you.</p>
+        <!-- Input and Content -->
+        <div class="jumbotron text-center row">
+            <!-- Input -->
+            <!-- color pallet I am using: https://coolors.co/30292f-413f54-5f5aa2-355691-3f4045-->
+            <div class="col-md-5">
+                <div id="user" style="background-color: #8FBC8F">
+                    <form action="{{ url_for('tylerminilab.bubblesort') }}" method="post">
+                        <label style="color: #000000"><b>Input Numbers to Sort from Greatest to Least</b></label>
+                        <g id="user_input">
+                            <input style="margin-bottom: 10px" name="input1" type="number">
+                            <input style="margin-bottom: 10px" name="input2" type="number">
+                            <input style="margin-bottom: 10px" name="input3" type="number">
+                            <input style="margin-bottom: 10px" name="input4" type="number">
+                            <input style="margin-bottom: 10px" name="input5" type="number">
+                        </g>
+                        <br>
+                        <input style="margin-bottom: 10px" type="submit" class="button" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Content-->
+            <!-- Color Pallet: https://coolors.co/313715-d16014-939f5c-bbce8a-e2f9b8-->
+
+
+            <div class="col-md-5">
+                <div style="background-color: #8FBC8F">
+                    <h3>Output</h3>
+                    <p>{{output_list}}</p>
+                    <p>{{testing}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}
+</html>

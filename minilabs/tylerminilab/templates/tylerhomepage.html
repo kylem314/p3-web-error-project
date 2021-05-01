@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "easter.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% block content %}
+    <a href = {{url_for('tylerminilab.minilab')}}>Tyler's Mini Lab</a>
+<br>
+    <a href = {{url_for('tylerminilab.bubblesort')}}>Tyler's Bubble Sort</a>
+{% endblock %}
+</body>
+</html>
