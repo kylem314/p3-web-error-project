@@ -2,6 +2,8 @@ HP = 10
 
 class Battleship:
 
+    HP = 10
+
     def __init__(self, damage, health, name):
         self.Damage = damage
         self.Health = health
@@ -15,10 +17,11 @@ class Battleship:
         print(health)
 
 
-   #- @property
+  #  @property
     def hp(self):
+
         return '{}'.format(self.Health)
-       # return self.Health
+    #   return self.Health
 
  #   @hp.setter
   #  def hp(self, Hp):

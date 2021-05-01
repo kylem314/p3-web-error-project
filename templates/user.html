@@ -8,7 +8,7 @@
 
 <style>
 
-body {margin:0}
+body {margin:0;;}
 
        .topnav {
   background-color: #333;
@@ -70,35 +70,41 @@ body {margin:0}
 
 </style>
 
-
-
-
 <div class="topnav" >
     <b>
         <a href="/">Home</a>
         <a href="/otherpage">Otherpage</a>
-        <a class="active" href="/movingimage">Moving Image</a>
-        <a href="/Blogin" >Battleship</a>
+        <a  href="/movingimage">Moving Image</a>
+        <a class="active" href="/battleship" >Battleship</a>
+
     </b>
 </div>
 
-<p><a href="/boatright">
-    <img src="/static/arrows/rightarrow.png" alt="uparrow" style="width:6.25%;height:12.5%px;">
-</a></p>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif%}
+{% endwith %}
 
-<p><a href="/boatleft">
-    <img src="/static/arrows/leftarrow.png" alt="uparrow" style="width:6.25%;height:12.5%px;">
-</a></p>
 
-<!--- {% set margin2=110 %} -->
+<h1>Welcome {{user}}</h1>
 
-<img src="/static/movingimage.png" alt="Tug Boat"  style="width:6.25%;height:12.5%px;margin-left:{{marginX}}px;margin-top:{{margin2}}px;z-index: 0;position: absolute;" >
+<p>Username:{{user}}</p>
+<p>Email:{{email}}</p>
 
-<img src="/static/movingimage.png" alt="Tug Boat"  style="width:12.5%;height:25%px;z-index: -1;position: relative;" >
 
-<p>There is a second larger boat to have the smaller boat go over the other image</p>
+<form action="#" method="POST">
+    <input type="email" name="email" placeholder="Enter Email" value="Input/Change Email Here">
+    <input type="submit" value="submit">
+</form>
 
+<p>&nbsp</p>
+
+<button> <a href="/Blogin">Login</a></button>
+<button> <a href="/logout">Logout</a></button>
+<button> <a href="/user">Profile Page</a></button>
 
 </body>
-
 </html>
