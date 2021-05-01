@@ -1,14 +1,13 @@
-import sys,time
+import sys
+sorting_list = []
+count = 0
 
-array=[]
-
-i=1
 while (i < len(sys.argv)):
     array.append(int(sys.argv[i]))
-    i+=1
+    i += 1
 
-def BubbleSort(array_data):
-    length=len(array_data)
+def SortAlgorithm(array_data):
+    length = len(array_data)
     result = True
     global count
     while result:
@@ -24,6 +23,5 @@ def BubbleSort(array_data):
             count+=1
 
     return array_data
-count = 0
-Time = time.time()
+
 array_result = str(BubbleSort(array))
