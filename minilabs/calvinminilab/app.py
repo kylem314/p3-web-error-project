@@ -1,6 +1,6 @@
 from flask import request, render_template
 from minilabs.calvinminilab.algo.minilab import Meat
-from minilabs.calvinminilab.algo import bubblesort
+from minilabs.calvinminilab.algo.bubblesort import BubbleSort
 from minilabs.calvinminilab import calvinminilab_bp
 
 
@@ -32,7 +32,7 @@ def bubblesort():
             b = b + 1
 
         print(all_list)
-        bubble = bubblesort(all_list)
+        bubble = BubbleSort(all_list)
         return render_template("bubblesort.html", output_list = bubble.OuputList)
 
     # conversion = Conversion('', all_list)
