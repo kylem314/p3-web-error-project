@@ -22,6 +22,7 @@ def SortAlgorithm(test_list):
                 test_list[i] = test_list[i + 1]
                 test_list[i + 1] = var
                 result = True
+
             i = i + 1
             count += 1
 
