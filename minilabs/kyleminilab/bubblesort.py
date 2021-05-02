@@ -13,14 +13,17 @@ def SortAlgorithm(test_list):
     while result:
         result = False
         i=0
-        while (i < iterations-1):
-            if (test_list[i] > test_list[i+1]):
-                var = test_listi]
-                test_list[i] = test_list[i+1]
-                test_list[i+1] = var
+        while (i < iterations - 1):
+
+# Logic for sorting the list
+
+            if (test_list[i] > test_list[i + 1]):
+                var = test_list[i]
+                test_list[i] = test_list[i + 1]
+                test_list[i + 1] = var
                 result = True
-            i=i+1
-            count+=1
+            i = i + 1
+            count += 1
 
     return test_list
 
