@@ -7,13 +7,13 @@ while (i < len(sys.argv)):
     i += 1
 
 def SortAlgorithm(array_data):
-    length = len(array_data)
-    result = True
     global count
+    result = True
+    iterations = len(array_data)
     while result:
         result = False
         i=0
-        while (i < length-1):
+        while (i < iterations-1):
             if (array_data[i] > array_data[i+1]):
                 temporary = array_data[i]
                 array_data[i] = array_data[i+1]
