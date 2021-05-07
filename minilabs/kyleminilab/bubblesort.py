@@ -2,9 +2,10 @@ import sys
 sorting_list = []
 count = 0
 
+i=1
 while (i < len(sys.argv)):
-    array.append(int(sys.argv[i]))
-    i += 1
+   sorting_list.append(int(sys.argv[i]))
+   i += 1
 
 def SortAlgorithm(test_list):
     global count
@@ -28,4 +29,4 @@ def SortAlgorithm(test_list):
 
     return test_list
 
-array_result = str(BubbleSort(array))
+sorting_list_result = str(SortAlgorithm(sorting_list))
