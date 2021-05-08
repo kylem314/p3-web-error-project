@@ -26,5 +26,5 @@ def bubblesort():
             list.append(int(input))
             b = b + 1
         bubble=BubbleSort(list)
-        return render_template('bubblesort.html', active_page='calvin', testing=bubble)
-    return render_template('bubblesort.html', active_page='calvin')
+        return render_template('calvinbubblesort.html', active_page='calvin', testing=bubble)
+    return render_template('calvinbubblesort.html', active_page='calvin')
