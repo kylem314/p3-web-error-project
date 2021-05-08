@@ -12,7 +12,7 @@ class Board():
         for row in range (self.size[0]):
             row = []
             for col in range(self.size[1]):
-                hasBomb = random() < prob
+          #      hasBomb = random() < prob
                 piece = Piece(hasBomb)
                 row.append(piece)
             self.board.append(row)
