@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 {% extends "easter.html" %}
-{{ super() }}
+
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}Bubble Sort{% endblock %}</title>
-
-  <style>
-    .single {
-      background-color: #6969AC;
-      color: white;
-    }
-  </style>
+  <title>{% block title %}Calvin{% endblock %}</title>
 </head>
-
 {% block content %}
+<h1 style="margin-left: 15px">Calvin Bubble Sort Location</h1>
 <div class="container">
 
   <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
     <!-- Title -->
     <div class="col-12" style="text-align: center;">
-      <h1><strong>Bubble Sort</strong></h1>
-      <p>Objective is to never miss a conversion question on the AP practice test again</p>
+      <h1><strong>BubbleSort</strong></h1>
     </div>
 
     <!-- Input and Content -->
     <div class="jumbotron text-center row">
-      <!-- Input -->
-      <!-- color pallet I am using: https://coolors.co/30292f-413f54-5f5aa2-355691-3f4045-->
-      <div class="col-md-5">
-        <div id="multi" style="background-color: #05556D">
-          <form action="{{ url_for('calvinminilab.bubblesort') }}" method="post">
-            <label style="color: #FFFFFF"><b>Input Numbers to Bubble Sort</b></label>
-            <g id="user_input">
-              <input style="margin-bottom: 10px" name="input1" type="number">
-              <input style="margin-bottom: 10px" name="input2" type="number">
-              <input style="margin-bottom: 10px" name="input3" type="number">
-              <input style="margin-bottom: 10px" name="input4" type="number">
-              <input style="margin-bottom: 10px" name="input5" type="number">
-            </g>
-            <br>
-
-            <input style="margin-bottom: 10px" type="submit" class="button" value="Submit">
-          </form>
-        </div>
+      <div class="col-md-6">
+        <h3>Sorting List</h3>
+        <img class="img-responsive py-3" src="/andrew/static/Pi.jpg" alt="" width="25%" height="Auto">
+        <form id="stringForm" action="/bubbleSort" method="POST" >
+          <input name="string" id="string" type="text">
+          <select id="select" name="select" required>
+            <option value="string">String</option>
+            <option value="integer">Integer</option>
+          </select>
+          <button>Go!</button>
+        </form>
       </div>
-
-      <!-- Content-->
-      <!-- Color Pallet: https://coolors.co/313715-d16014-939f5c-bbce8a-e2f9b8-->
-
-
-      <div class="col-md-5">
-        <div style="background-color: #CD7F4D">
-          <h3>Output</h3>
-          <p>{{output_list}}</p>
-          <p>{{testing}}</p>
-        </div>
+      <div class="col-md-6">
+        <h3>Output</h3>
+        <!-- Number, List table -->
+        <table class="mx-auto">
+          <tr>
+            <th scope="row">Modified List</th>
+          </tr>
+          <tr>
+            <td>{{output_list}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Orginial List</th>
+          </tr>
+          <tr>
+            <td>{{original_list}}</td>
+          </tr>
+        </table>
       </div>
     </div>
+
   </div>
 
 </div>
+<div class="col-12" style="text-align: center;">
+  <h1><strong>WOW!</strong></h1>
 </div>
-
-
-
-
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+</style>
 {% endblock %}
+</html>
