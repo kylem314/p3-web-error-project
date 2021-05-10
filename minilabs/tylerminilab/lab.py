@@ -17,7 +17,7 @@ class Marvel:
 
         self.hero_series()
 
-    """Algorithm for building Fibonacci sequence, this id called from __init__"""
+    """Algorithm for building sequence, this id called from __init__"""
     def hero_series(self):
         limit = self._series
         f = [(random.sample((herolist1), k=self._series))]
