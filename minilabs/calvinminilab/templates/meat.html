@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-{% extends "easter.html" %}
+
 {{ super() }}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Calvin's Meat Selection{% endblock %}</title>
 </head>
-{% block content %}
+
 <body>
+{% extends "LabNav.html" %}
+{% block content %}
 <div class="jumbotron text-center row">
     <div>
         <h3>How many Meats do want??</h3>

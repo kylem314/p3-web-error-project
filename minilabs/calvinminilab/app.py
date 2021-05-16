@@ -14,17 +14,27 @@ def meatgrinder():
         return render_template("meat.html", Meat =Meat(int(request.form.get("series"))))
     return render_template("meat.html", Meat=Meat(1))
 
-@calvinminilab_bp.route('/bubblesort', methods=["GET", "POST"])
-def bubblesort():
+@calvinminilab_bp.route('/bubbleSort', methods=["GET", "POST"])
+def bubbleSort():
+    arr = []
+    isString = False
     if request.form:
-        list = []
-        b = 1
-        Numbers = 5
-        for i in range(Numbers):
-            string = 'input' + str(b)
-            input = request.form.get(string)
-            list.append(int(input))
-            b = b + 1
-        bubble=BubbleSort(list)
-        return render_template('bubblesort.html', active_page='calvin', testing=bubble)
-    return render_template('bubblesort.html', active_page='calvin')
+        string = request.form.get("string")
+        arr = string.split()
+        original = string.split()
+        if(request.form["select"] == "integer"):
+            try:
+                for j in range (0,len(arr)):
+                    arr[j] = int(arr[j])
+                for j in range (0,len(original)):
+                    original[j] = int(original[j])
+                return render_template("calvinbubblesort.html",output_list = BubbleSort(arr,isString).OuputList,original_list = original)
+            except ValueError:
+                return render_template("calvinbubblesort.html",output_list = "Can Only Contain String or Integer",original_list = "Error")
+        else:
+            try:
+                isString = True
+                return render_template("calvinbubblesort.html",output_list = BubbleSort(arr,isString).OuputList,original_list = original)
+            except ValueError:
+                return render_template("calvinbubblesort.html",output_list = "Can Only Contain String or Integer",original_list = "Error")
+    return render_template("calvinbubblesort.html",output_list = BubbleSort(arr,isString).OuputList,original_list = arr)

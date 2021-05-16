@@ -2,26 +2,31 @@ import sys
 sorting_list = []
 count = 0
 
+i=1
 while (i < len(sys.argv)):
-    array.append(int(sys.argv[i]))
-    i += 1
+   sorting_list.append(int(sys.argv[i]))
+   i += 1
 
-def SortAlgorithm(array_data):
-    length = len(array_data)
-    result = True
+def SortAlgorithm(test_list):
     global count
+    result = True
+    iterations = len(test_list)
     while result:
         result = False
         i=0
-        while (i < length-1):
-            if (array_data[i] > array_data[i+1]):
-                temporary = array_data[i]
-                array_data[i] = array_data[i+1]
-                array_data[i+1] = temporary
+        while (i < iterations - 1):
+
+# Logic for sorting the list
+
+            if (test_list[i] > test_list[i + 1]):
+                var = test_list[i]
+                test_list[i] = test_list[i + 1]
+                test_list[i + 1] = var
                 result = True
-            i=i+1
-            count+=1
 
-    return array_data
+            i = i + 1
+            count += 1
 
-array_result = str(BubbleSort(array))
+    return test_list
+
+sorting_list_result = str(SortAlgorithm(sorting_list))
