@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-
+{% extends "navbar.html" %}
+{% block content %}
 <style>
 
 body {margin:0}
@@ -73,14 +74,7 @@ body {margin:0}
 
 
 
-<div class="topnav" >
-    <b>
-        <a href="/">Home</a>
-        <a href="/otherpage">Otherpage</a>
-        <a class="active" href="/movingimage">Moving Image</a>
-        <a href="/Blogin" >Battleship</a>
-    </b>
-</div>
+
 
 <p><a href="/boatright">
     <img src="/static/arrows/rightarrow.png" alt="uparrow" style="width:6.25%;height:12.5%px;">
@@ -98,7 +92,7 @@ body {margin:0}
 
 <p>There is a second larger boat to have the smaller boat go over the other image</p>
 
-
+{% endblock %}
 </body>
 
 </html>

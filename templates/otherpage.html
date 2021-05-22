@@ -6,6 +6,8 @@
 
 </head>
 <body>
+{% extends "navbar.html" %}
+{% block content %}
 <style>
 
 body {margin:0;;}
@@ -71,14 +73,6 @@ body {margin:0;;}
 </style>
 
 
-<div class="topnav" >
-    <b>
-        <a href="/">Home</a>
-        <a class="active"  href="/otherpage">Otherpage</a>
-        <a  href="/movingimage">Moving Image</a>
-        <a href="/Blogin" >Battleship</a>
-    </b>
-</div>
 
 <p>filler page for testing nav bar</p>
 
@@ -190,6 +184,6 @@ body {margin:0;;}
 
 -->
 
-
+{% endblock %}
 </body>
 </html>

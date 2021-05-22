@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-
+{% extends "navbar.html" %}
+{% block content %}
 <style>
 
 body {margin:0;;}
@@ -70,15 +71,7 @@ body {margin:0;;}
 
 </style>
 
-<div class="topnav" >
-    <b>
-        <a href="/">Home</a>
-        <a href="/otherpage">Otherpage</a>
-        <a  href="/movingimage">Moving Image</a>
-        <a class="active" href="/battleship" >Battleship</a>
 
-    </b>
-</div>
 
 {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -106,5 +99,7 @@ body {margin:0;;}
 <button> <a href="/logout">Logout</a></button>
 <button> <a href="/user">Profile Page</a></button>
 
+{% endblock %}
 </body>
+
 </html>

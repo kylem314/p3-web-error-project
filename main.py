@@ -41,14 +41,15 @@ db = SQLAlchemy(app)
 
 
 
-class users(db.Model):
+class maindb(db.Model):
     _id = db.Column('id', db.Integer, primary_key=True)
     name = db.Column('name', db.String(100))
     email = db.Column('email', db.String(100))
+    username = db.Column(db.String(15), unique = True, nullable = False)
+    password = db.Column(db.String, nullable = False)
 
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
+    def __repr__(self):
+        return f"User('{self.username}')"
 
 
 
@@ -135,6 +136,9 @@ app.register_blueprint(Blueprints, url_prefix='')
 
 #---------------------------------------------------
 
+#imports
+
+
 
 
 
@@ -150,25 +154,52 @@ app.register_blueprint(Blueprints, url_prefix='')
 @app.route('/Blogin', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
+        #query database and set up session
+        users = maindb.query.all()
+        session.pop('user_id', None)
         session.permanent = True
-        user = request.form['nm']
-        session['user'] = user
-        found_user = users.query.filter_by(name=user).first()
-        if found_user:
-            session['email'] = found_user.email
 
-        else:
-            usr = users(user, '')
-            db.session.add(usr)
-            db.session.commit()
-        flash(f'Login Successfull, {user}', 'info')
-        return redirect(url_for('user'))
+        #retrieve username and password from html
+        username = request.form['username']
+        password = request.form['password']
+
+        #check if username and password match
+        try:
+            user = [user for user in users if user.username == username][0]
+            #successful login
+            if user and user.password == password:
+                session['user'] = user.username
+                flash("You have been logged in")
+                return redirect(url_for('user'))
+            #incorrect username/password
+            else:
+                flash("User is incorrect or does not exist.")
+                return redirect(url_for('login'))
+        except:
+            flash("Password or Username is incorrect or does not exist.")
+            return redirect(url_for('login'))
     else:
         if 'user' in session:
-            user = session['user']
-            flash(f'{user}, you are already logged in', 'info')
+            flash("You are already logged in")
             return redirect(url_for('user'))
-        return render_template('Battleship.html')
+        return render_template('login.html', insession = False)
+
+@app.route('/register', methods = ['POST', 'GET'])
+def register():
+    if request.method == "POST":
+        #retrieve username and password from html
+        usr = request.form.get('username')
+        pw = request.form.get('password')
+        #commit username and password to database
+        dbcommit = maindb(username = usr, password = pw)
+        db.session.add(dbcommit)
+        db.session.commit()
+        flash("New account successfully created")
+        #send user back to login
+        return redirect(url_for('login'))
+    #render template
+    flash("Create a new account")
+    return render_template('register.html', insession = False)
 
 @app.route('/user', methods=['POST', 'GET'])
 def user():
@@ -179,7 +210,7 @@ def user():
         if request.method == 'POST':
             email = request.form['email']
             session['email'] = email
-            found_user = users.query.filter_by(name=user).first()  #changes users email
+            found_user = maindb.query.filter_by(name=user).first()  #changes users email
             found_user.email = email
             db.session.commit()
             flash('Email was saved')
