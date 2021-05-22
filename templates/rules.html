@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% extends "LabNav.html" %}
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
-    <title>Rules Page</title>
+    <title>{% block title %}Rules Page{% endblock %}</title>
 </head>
 <body>
-
-<<div id="chop_1-0--chop-content" class="loc chop-content" style="">
+{% block content %}
+<div id="chop_1-0--chop-content" class="loc chop-content" style="">
     <div id="sc-page_1-0" class="comp text-passage structured-content sc-page mntl-sc-page mntl-block" data-sc-sticky-offset="101" data-sc-ad-label-height="11" data-sc-ad-track-spacing="100" data-sc-min-track-height="250" data-sc-max-track-height="600" data-sc-breakpoint="50em" data-sc-load-immediate="5" data-sc-content-positions="[1, 1, 1, 1250, 1, 1, 1, 1]" data-bind-scroll-on-start="true">
         <p id="mntl-sc-block_1-0" class="comp text-passage mntl-sc-block lifestyle-sc-block-html mntl-sc-block-html">
             Battleship&nbsp;is a war-themed <a href="https://www.thesprucecrafts.com/board-games-4162951" data-component="link" data-source="inlineLink" data-type="internalLink" data-ordinal="1">board game</a> for two players in which the opponents try to guess the location of their opponent's warships and sink them. A paper and pencil version of the game dates back to World War I, but most people are familiar with the game through the plastic board game that was first marketed by the <a href="https://www.thesprucecrafts.com/vintage-milton-bradley-games-4143304" data-component="link" data-source="inlineLink" data-type="internalLink" data-ordinal="2">Milton Bradley Company</a> in 1967. Since then, the game has spawned various video games and smartphone app variations. Today, the board game version is produced by <a href="https://shop.hasbro.com/en-us" data-component="link" data-source="inlineLink" data-type="externalLink" data-ordinal="3" rel="nofollow noopener" target="_blank">Hasbro</a>, the company that acquired Milton Bradley in 1984.&nbsp;
@@ -146,4 +147,5 @@
     </div>
 </div>
 </body>
+{% endblock %}
 </html>
