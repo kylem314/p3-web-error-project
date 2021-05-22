@@ -128,6 +128,10 @@ def easter():
 def Jminilab():
     return render_template('James Bubble Sort.html')
 
+@app.route('/rules')
+def rules():
+    return render_template('rules.html')
+
 #Blueprint for battleship grid----------------------
 #James's minilab
 
