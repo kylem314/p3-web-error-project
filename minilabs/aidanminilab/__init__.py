@@ -3,16 +3,16 @@ from flask import request
 from minilabs.aidanminilab.minilab import Workouts
 from minilabs.aidanminilab.bubblesort import BubbleSort
 
-aidanminilab_bp = Blueprint('aidanminilab', __name__,
+aminilab_bp = Blueprint('minilab', __name__,
                             template_folder='templates',)
 
-@aidanminilab_bp.route('/', methods=['GET', 'POST'])
+@aminilab_bp.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        return render_template("aidanminilab.html", Workouts=Workouts(int(request.form.get("series"))))
-    return render_template("aidanminilab.html", Workouts=Workouts(1))
+        return render_template("minilab.html", Workouts=Workouts(int(request.form.get("series"))))
+    return render_template("minilab.html", Workouts=Workouts(1))
 
-@aidanminilab_bp.route('/bubblesort', methods = ['GET','POST'])
+@aminilab_bp.route('/bubblesort', methods = ['GET','POST'])
 def BubbleSort():
     arr = []
     isString = False

@@ -1,5 +1,6 @@
+import flask
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-from minilabs.aidanminilab import aidanminilab_bp
+from minilabs.aidanminilab import aminilab_bp
 from minilabs.tylerminilab import tylerminilab_bp
 from minilabs.jamesminilab import jamesminilab_bp
 from minilabs.kyleminilab import kyleminilab_bp
@@ -12,7 +13,7 @@ from flask_sqlalchemy import SQLAlchemy
 #Minilab blueprint registry
 #-----------------------------------------------------
 app = Flask(__name__)
-app.register_blueprint(aidanminilab_bp, url_prefix='/aidanminilab')
+app.register_blueprint(aminilab_bp, url_prefix='/aidanminilab')
 app.register_blueprint(calvinminilab_bp, url_prefix='/calvinminilab')
 app.register_blueprint(tylerminilab_bp, url_prefix='/tylerminilab')
 app.register_blueprint(jamesminilab_bp, url_prefix='/jamesminilab')
@@ -133,6 +134,8 @@ def Jminilab():
 def rules():
     return render_template('rules.html')
 
+
+
 #Blueprint for battleship grid----------------------
 #James's minilab
 
@@ -239,7 +242,20 @@ def logout():
     session.pop('email', None)
     return redirect(url_for('login'))
 
+#webapi
+import requests
 
+@app.route('/news')
+def news():
+    #twitter embed api url
+    urldnhs = "https://publish.twitter.com/oembed?url=https://twitter.com/dnhsnighthawks"
+    urlpoway = "https://publish.twitter.com/oembed?url=https://twitter.com/powayunified"
+    responsednhs = requests.get(urldnhs)
+    responsepoway = requests.get(urlpoway)
+    #set url value in json to variable
+    jsonurldnhs = responsednhs.json()['url']
+    jsonurlpoway = responsepoway.json()['url']
+    return flask.render_template("news.html", jsonurldnhs=jsonurldnhs, jsonurlpoway=jsonurlpoway)
 
 
 

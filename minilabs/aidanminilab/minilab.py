@@ -1,6 +1,5 @@
 import random
 
-
 workoutlist = ["Standing Forward Bend", "Kneeling Hip Flexor Stretch", "Leg Press", "Barbell Squats", "Jump Squat", "Hack Squat", "Romanian Deadlift", "Standing Calf Raises", "Leg Extensions", "Lying Leg Curls", "Dumbbell Step Ups", "Reverse Lunge", "Walking Lunge"]
 
 class Workouts:
@@ -18,6 +17,7 @@ class Workouts:
         self.workout_series()
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
+
 
     """Algorithm for building book series list, this id called from __init__"""
     def workout_series(self):
