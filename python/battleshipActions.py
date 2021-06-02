@@ -1,4 +1,4 @@
-# Play Game
+#  Play Game
 os.system('clear')
 print_board(board_display)
 
