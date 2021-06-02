@@ -5,7 +5,7 @@ max_ship_size = 5 #ship hit points
 min_ship_size = 2
 num_turns = 40
 
-#Create lists
+#Create list
 ship_list = []
 
 board = [[0] * col_size for x in range(row_size)]
