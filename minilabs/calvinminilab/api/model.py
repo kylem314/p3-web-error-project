@@ -3,7 +3,7 @@ from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
 
-from apidef import app
+from model import app
 
 dbURI = 'sqlite:///model/myDB.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -35,7 +35,7 @@ class Users(db.Model):
     def json(self):
         return {
             "userID": self.userID,
-            "name": self.name,
+            "username": self.name,
             "email": self.email,
             "password": self.password,
             "phone": self.phone
@@ -119,7 +119,7 @@ def model_update_name(user_dict):
     user = Users.query.filter_by(userID=userid).first()
     if user is None:
         return None
-    db.session.query(Users).filter_by(userID=userid).update({Users.name: user_dict['name']})
+    db.session.query(Users).filter_by(userID=userid).update({Users.name: user_dict['username']})
     """commit changes to database"""
     db.session.commit()
     return user.json()
