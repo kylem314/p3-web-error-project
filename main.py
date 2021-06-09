@@ -134,6 +134,10 @@ def Jminilab():
 def rules():
     return render_template('rules.html')
 
+@app.route('/MessageBoard')
+def MessageBoard():
+    return render_template('MessageBoard.html')
+
 
 
 #Blueprint for battleship grid----------------------
