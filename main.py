@@ -86,6 +86,10 @@ def home():
 def otherpage():
     return render_template('otherpage.html', test='Select A Square')
 
+@app.route('/aboutus')
+def aboutus():
+        return render_template('aboutus.html')
+
 #404 page
 @app.errorhandler(404)
 def page_not_found(e):

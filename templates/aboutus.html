@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
-</head>
-<body>
+
+{% extends "aboutusbase.html" %}
+
+
+{% block body %}
 <div class="header">
     <h1>Who is P3 Web-Error?</h1>
 </div>
@@ -49,8 +48,11 @@
         </div>
     </div>
 
-</body>
-    <!-- <style>
+{% endblock %}
+
+{% block style %}
+
+    <style>
         .row {
             padding: 5px;
             text-align: center;
@@ -82,5 +84,22 @@
             width: 50%;
         }
 
-    </style> -->
-</html>
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+{% endblock %}
+
