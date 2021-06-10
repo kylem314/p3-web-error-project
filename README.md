@@ -29,7 +29,7 @@ Calvin Ni |https://github.com/statsprojectlol |
 - [ ] Battleship game
 - [ ] Online multiplayer
 - [ ] Leaderboard
-- [ ] API
+- [x] API
 
 # Project Scope
 
