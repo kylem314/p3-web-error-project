@@ -20,6 +20,17 @@ Calvin Ni |https://github.com/statsprojectlol |
 | :---: | :---: | :---: | :---: | :---: | 
 | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57450505) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57450628) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451796) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451796) | [link](https://github.com/kylem314/p3-web-error-project/projects/1#card-57451412) |
 
+**Umbrella ticket for P3 Web Error**
+
+- [x] Database
+- [x] Login System
+     - [ticket](https://github.com/kylem314/p3-web-error-project/projects/1#card-61146210)
+- [ ] Messaging System
+- [ ] Battleship game
+- [ ] Online multiplayer
+- [ ] Leaderboard
+- [ ] API
+
 # Project Scope
 
 [Link to our project plan](https://docs.google.com/document/d/1mxCPJsmhk86rFyu8uSxPnQBxzuSYuO-hp269rwPNfx8/edit?usp=sharing)
