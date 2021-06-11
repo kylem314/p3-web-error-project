@@ -46,8 +46,11 @@ class maindb(db.Model):
     _id = db.Column('id', db.Integer, primary_key=True)
     name = db.Column('name', db.String(100))
     email = db.Column('email', db.String(100))
+   # usermessage = db.Column('message', db.String(100))
     username = db.Column(db.String(15), unique = True, nullable = False)
     password = db.Column(db.String, nullable = False)
+    message = db.Column(db.String(100), nullable = False)
+
 
     def __repr__(self):
         return f"User('{self.username}')"
@@ -206,7 +209,7 @@ def register():
         usr = request.form.get('username')
         pw = request.form.get('password')
         #commit username and password to database
-        dbcommit = maindb(username = usr, password = pw)
+        dbcommit = maindb(username = usr, password = pw, message = ' ')
         db.session.add(dbcommit)
         db.session.commit()
         flash("New account successfully created")
@@ -230,12 +233,33 @@ def user():
             db.session.commit()
             flash('Email was saved')
         elif request.method == 'GET':
+
+            found_user = maindb.query.filter_by(username=user).first()
+            Message = found_user.message
+
             if 'email' in session:
                 email = session['email']
-        return render_template('user.html', email=email, user=user)
+        return render_template('user.html', email=email, user=user, message = Message)
     else:
         flash('You are not logged in', 'info')
         return redirect(url_for('login'))
+
+@app.route('/message', methods=['POST', 'GET'])
+def message():
+
+    if request.method == 'POST':
+        usr = request.form['msuser']
+        msg_user = maindb.query.all()
+        user = [user for user in msg_user if user.username == usr][0]
+
+        Message = request.form['msguser']
+        session['msguser'] = Message
+        found_user = maindb.query.filter_by(username=usr).first()
+        found_user.message = Message
+        db.session.add(found_user)
+        db.session.commit()
+
+    return render_template('user.html', usr = usr, ussr=user)
 
 
 
@@ -283,5 +307,6 @@ def news():
 #---------------------------------------------------------
 if __name__ == "__main__":
     db.create_all()
+    db.session.commit()
     app.run(debug=True, host="127.0.0.1", port="5001")
 #---------------------------------------------------------
