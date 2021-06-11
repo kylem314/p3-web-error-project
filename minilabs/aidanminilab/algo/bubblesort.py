@@ -35,7 +35,7 @@ class BubbleSort:
         for j in range(0, len(arr)):
             arr[j] = arr[j].upper()
 
-
+# Getter
     @property
     def OutputList(self):
         arr = self.input_list
