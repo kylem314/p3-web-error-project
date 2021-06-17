@@ -135,6 +135,7 @@ def c3():
 
     marginbattleshiptop = 19.05
     marginbattleshipx = 56.5
+    test='c3'
     return render_template('otherpage.html', test='c3', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 
@@ -145,6 +146,7 @@ def c4():
 
     marginbattleshiptop = 19.05
     marginbattleshipx = 66.5
+    test='c4'
     return render_template('otherpage.html', test='c4', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 #D routes start here
@@ -157,7 +159,7 @@ def d1():
 
     marginbattleshiptop = 25.4
     marginbattleshipx = 36.5
-
+    test='d1'
     return render_template('otherpage.html', test='d1', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 @Blueprints.route('/d2')
@@ -167,6 +169,7 @@ def d2():
 
     marginbattleshiptop = 25.4
     marginbattleshipx = 46.5
+    test='d2'
     return render_template('otherpage.html', test='d2', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 @Blueprints.route('/d3')
@@ -176,6 +179,7 @@ def d3():
 
     marginbattleshiptop = 25.4
     marginbattleshipx = 56.5
+    test='d3'
     return render_template('otherpage.html', test='d3', marginX = marginbattleshipx, marginT = marginbattleshiptop)
 
 
@@ -186,4 +190,5 @@ def d4():
 
     marginbattleshiptop = 25.4
     marginbattleshipx = 66.5
+    test='d4'
     return render_template('otherpage.html', test='d4', marginX = marginbattleshipx, marginT = marginbattleshiptop)

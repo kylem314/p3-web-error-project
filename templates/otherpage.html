@@ -88,43 +88,88 @@ body {margin:0;;}
 </form>
 
 {{stats}}
-
+<!---
 <table>
-
+    <form>
     <tr>
-        <form>
+
         <th> <input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; formaction = '/a1'/> </th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=a2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=a3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=a4 /></th>
-        </form>
+
     </tr>
     <tr>
-        <form>
+
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=b4 /></th>
-        </form>
+
     </tr>
     <tr>
-        <form>
+
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=c4 /></th>
-        </form>
+
     </tr>
     <tr>
-        <form>
+
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d1 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d2 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d3 /></th>
         <th><input type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction=d4 /></th>
-        </form>
+
     </tr>
+    </form>
+
 
 </table>
+-->
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>Request a game with a user</p>
+<form action="otherpage" method="POST">
+    <input type="text" name="gameuser" placeholder="Enter User">
+    <input type="submit" value="submit">
+</form>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<form method="post" >
+
+    <input type="text" name="shiplocation" placeholder="Enter Position">
+    <input type="submit" value="submit" formaction="/otherpage1">
+
+</form>
+
+
+<p>Position Battleship</p>
+
+{{shiplocation}}
+{{signed_user}}
+
+
+
+
+<p>Guess opponents ship position:</p>
+<form method="post" >
+
+    <input type="text" name="gshiplocation" placeholder="Guess Position">
+    <input type="submit" value="submit" formaction="/otherpage3">
+
+</form>
+
+
+<!--{{signed_user}}-->
+<form>
+    <input type ="submit" value='submit location' inputName="firstButton" formaction = {{shiplocation}} />
+</form>
+
+{{guess}}
+
 
 <h1 style="z-index:0; position;absolute;"> {{test}} </h1>
 
@@ -185,5 +230,6 @@ body {margin:0;;}
 -->
 
 {% endblock %}
+
 </body>
 </html>
