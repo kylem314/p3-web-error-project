@@ -118,12 +118,25 @@ body {margin:0;;}
 {{ussr}}
 
 <p>private message form a user:</p>{{message}}
+
+<!--<p>game:</p> {{gameplay}} {{gamet}}-->
+
+<!--{{Requesteduser}}-->
+
+{% if gameplay == "True" %}
+
+<p>{{Requesteduser}} has invited you to a game of battleship</p>
+<form action="/otherpage2" method="POST">
+    <input type="submit" value="Start Game?">
+</form>
+{% endif %}
+
 {% endblock %}
 
 
 
 
-
+{{battleshiplocation}}
 </body>
 
 </html>

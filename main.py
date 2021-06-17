@@ -50,6 +50,10 @@ class maindb(db.Model):
     username = db.Column(db.String(15), unique = True, nullable = False)
     password = db.Column(db.String, nullable = False)
     message = db.Column(db.String(100), nullable = False)
+    battleshiplocation = db.Column(db.String(5), nullable = False)
+    o_battleshiplocation = db.Column(db.String(5), nullable = False)
+    startgame = db.Column(db.String(50), nullable = False)
+    requested_user = db.Column(db.String(100), nullable = False)
 
 
     def __repr__(self):
@@ -85,10 +89,6 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/otherpage')
-def otherpage():
-    return render_template('otherpage.html', test='Select A Square')
-
 @app.route('/aboutus')
 def aboutus():
         return render_template('aboutus.html')
@@ -104,7 +104,12 @@ def movingimage():
     global marginx
     marginx = 0
 
-    return render_template('MovingImage.html')
+    user = session['user']
+    
+    found_user = maindb.query.filter_by(username=user).first()
+    battleshiplocation = found_user.battleshiplocation
+    battleshiplocation_o = found_user.o_battleshiplocation
+    return render_template('MovingImage.html', battleshiplocation = battleshiplocation, battleshiplocation_o = battleshiplocation_o)
 
 
 
@@ -209,7 +214,7 @@ def register():
         usr = request.form.get('username')
         pw = request.form.get('password')
         #commit username and password to database
-        dbcommit = maindb(username = usr, password = pw, message = ' ')
+        dbcommit = maindb(username = usr, password = pw, message = ' ', battleshiplocation = ' ', startgame = ' ', requested_user = ' ', o_battleshiplocation = ' ')
         db.session.add(dbcommit)
         db.session.commit()
         flash("New account successfully created")
@@ -222,6 +227,7 @@ def register():
 @app.route('/user', methods=['POST', 'GET'])
 def user():
     email = None
+   # session.pop('user', None)
     if 'user' in session:
         user = session['user']
 
@@ -236,10 +242,17 @@ def user():
 
             found_user = maindb.query.filter_by(username=user).first()
             Message = found_user.message
+            Gameplay = found_user.startgame
+            Requesteduser = found_user.requested_user
+            battleshiplocation = found_user.battleshiplocation
+
+            if Gameplay == 'True':
+                gamet = 'yes'
+                return render_template('user.html', email=email, user=user, message = Message, gameplay=Gameplay, gamet = gamet, Requesteduser = Requesteduser, battleshiplocation = battleshiplocation)
 
             if 'email' in session:
                 email = session['email']
-        return render_template('user.html', email=email, user=user, message = Message)
+        return render_template('user.html', email=email, user=user, message = Message, gameplay=Gameplay, Requesteduser = Requesteduser, battleshiplocation = battleshiplocation)
     else:
         flash('You are not logged in', 'info')
         return redirect(url_for('login'))
@@ -248,12 +261,13 @@ def user():
 def message():
 
     if request.method == 'POST':
+        
         usr = request.form['msuser']
         msg_user = maindb.query.all()
         user = [user for user in msg_user if user.username == usr][0]
 
         Message = request.form['msguser']
-        session['msguser'] = Message
+  #      session['msguser'] = Message
         found_user = maindb.query.filter_by(username=usr).first()
         found_user.message = Message
         db.session.add(found_user)
@@ -261,6 +275,92 @@ def message():
 
     return render_template('user.html', usr = usr, ussr=user)
 
+
+
+
+@app.route('/otherpage', methods=["GET", "POST"])
+def otherpage():
+    if request.method == 'POST':
+        signed_user = session['user']
+    #    shiplocation = request.form['shiplocation']
+        requestuser = request.form['gameuser']
+
+        ship_user = maindb.query.all()
+        user = [user for user in ship_user if user.username == requestuser][0]
+        found_user = maindb.query.filter_by(username=requestuser).first()
+        found_user.startgame = 'True'
+        found_user.requested_user = signed_user
+        db.session.add(found_user)
+        db.session.commit()
+
+        return render_template('otherpage.html', user = user, startgame = 'True', signed_user = signed_user)
+    else:
+        return render_template('otherpage.html')
+
+    return render_template('otherpage.html', test='Select A Square')
+
+@app.route('/otherpage1', methods=["GET", "POST"])
+def otherpage1():
+    if request.method == 'POST':
+        shiplocation = request.form['shiplocation']
+        signed_user = session['user']
+        ship_user = maindb.query.all()
+        user = [user for user in ship_user if user.username == signed_user][0]
+        found_user = maindb.query.filter_by(username=signed_user).first()
+        found_user.battleshiplocation = shiplocation
+        ruser = found_user.requested_user
+        db.session.add(found_user)
+        db.session.commit()
+
+        ship_user2 = maindb.query.all()
+        user2 = [user for user in ship_user2 if user.username == ruser][0]
+        found_user2 = maindb.query.filter_by(username=ruser).first()
+        found_user2.o_battleshiplocation = shiplocation
+        db.session.add(found_user2)
+        db.session.commit()
+
+
+        return render_template('otherpage.html', shiplocation = shiplocation, user = user, user2 = user2, signed_user = signed_user)
+    else:
+        return render_template('otherpage.html')
+
+    return render_template('otherpage.html', test='Select A Square')
+
+
+@app.route('/otherpage2', methods = ['GET', 'POST'])
+def otherpage2():
+
+    signed_user = session['user']
+    ship_user = maindb.query.all()
+    user = [user for user in ship_user if user.username == signed_user][0]
+    found_user = maindb.query.filter_by(username=signed_user).first()
+    ruser = found_user.requested_user
+
+    ship_user2 = maindb.query.all()
+    user2 = [user for user in ship_user2 if user.username == ruser][0]
+    found_user2 = maindb.query.filter_by(username=ruser).first()
+    found_user2.requested_user = signed_user
+    db.session.add(found_user2)
+    db.session.commit()
+    return render_template('otherpage.html', userT = user, userTT = user2)
+
+
+@app.route('/otherpage3', methods = ['GET', 'POST'])
+def otherpage3():
+    signed_user = session['user']
+    guess = request.form['gshiplocation']
+    ship_user = maindb.query.all()
+    user = [user for user in ship_user if user.username == signed_user][0]
+    found_user = maindb.query.filter_by(username=signed_user).first()
+    location = found_user.o_battleshiplocation
+    if guess == location:
+        return render_template('otherpage.html', user = user, guess='Hit!')
+    else:
+        return render_template('otherpage.html', user = user, guess='Miss!')
+
+
+
+    return render_template('otherpage.html')
 
 
 @app.route('/logout')
