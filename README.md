@@ -87,6 +87,19 @@ Minilabs
 [Bubble sort on live site])(76.176.107.1/kyleminilab/kylebubblesort)
 
 Tyler Cloutier
+- Kyle Myint (4 / 5)
+     - Technicals in Project (+2.5)
+          - [Python](https://github.com/kylem314/p3-web-error-project/blob/main/python/HtmlToPython.py) logic for battleship game with hits and misses
+          - [Use of databases](https://github.com/kylem314/p3-web-error-project/blob/main/blueprints.py) to communicate with users - save messages to a database, able to be read by the other user
+          - [Use of algorithms](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/kyleminilab/bubblesort.py) to accomplish tasks (in this case, bubble sorting) 
+          - [More complex algorithm to calculate ELO](https://github.com/kylem314/p3-web-error-project/blob/main/python/elo.py) though we didn’t have time to incorporate it into the game
+          - [Started a battleship AI](https://github.com/kylem314/p3-web-error-project/blob/main/python/battleshipai.py), didn’t have enough time to incorporate into game either though
+     - Minilabs (+1.5)
+          - [Classes - Prime Number Check](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/kyleminilab/classes.py) 
+          - Minilab using classes to determine which numbers are prime out of a given list
+          - [Bubble sort](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/kyleminilab/bubblesort.py)
+          - Minilab using a sorting technique known as bubble sort to organize a list
+
 - Aidan Lin (5 points)
      - Labs (+2)
           - [Random Workout Generator Lab](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/aidanminilab/algo)
