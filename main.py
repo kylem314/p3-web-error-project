@@ -10,6 +10,7 @@ from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 
 
+
 #Minilab blueprint registry
 #-----------------------------------------------------
 app = Flask(__name__)
@@ -150,6 +151,16 @@ def rules():
 def MessageBoard():
     return render_template('MessageBoard.html')
 
+@app.route('/crossoverapi', methods = ["GET", "POST"])
+def crossoverapi() :
+    prettytext = ''
+    reviewresponse = requests.request("GET", "https://thegroup.nighthawkcodingsociety.com/ratingAPI")
+    reviewdump = reviewresponse.json()
+    reviewresults = reviewdump["ratings"]
+
+    for item in reviewresults:
+        prettytext = prettytext + "<div class='box'><div class='text'> ID:" + str(item['id']) + "</br> Game:" + item['game'] + "</br> Stars:" + str(item['stars']) + "</br> Review:" + item['review'] + "</br> User:" + item['user'] + "</div></div>"
+    return render_template('crossoverapi.html', prettytext = prettytext)
 
 
 #Blueprint for battleship grid----------------------

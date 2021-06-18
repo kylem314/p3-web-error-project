@@ -16,7 +16,52 @@
     </style>
 </head>
 <body>
-<!-- twitter embed from api -->
+<nav class = "navbar navbar-expand navbar-dark bg-dark">
+    <ul class = "navbar.content navbar-nav mr-auto">
+
+        <a class = "navbar-brand">Battleship Website</a>
+        <!-- homepage -->
+        <a href = "/" class = "nav-link">Home</a>
+
+        <li class = "nav-item">
+            <a href = "/otherpage" class = "nav-link">Battleship</a>
+        </li>
+
+        <li class = "nav-item">
+            <a href = "/easter" class = "nav-link">Minilabs</a>
+        </li>
+
+        <li class = "nav-item">
+            <a href = "/MessageBoard" class = "nav-link">Message Board</a>
+        </li>
+
+        <li class = "nav-item">
+            <a href = "/news" class = "nav-link">News</a>
+        </li>
+
+        <li class = "nav-item">
+            <a href = "/aboutus" class = "nav-link">About Us</a>
+        </li>
+
+        <li class = "nav-item">
+            <a href = "/user" class = "nav-link">Login</a>
+        </li>
+
+        {% if insession == True %}
+            <li class = "nav-item">
+                <a href = "/user" class = "nav-link">User</a>
+            </li>
+        {% endif %}
+
+
+    </ul>
+    {% if insession == True %}
+        <li class = "navbar.content navbar-nav">
+            <a href = "/user" class = "nav-link">{{ user }}</a>
+        </li>
+    {% endif %}
+</nav>
+!-- twitter embed from api -->
 <div>
     <a class="twitter-timeline" data-chrome="transparent" data-width="500" data-height="700" data-theme="dark" href={{jsonurlpoway}}></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <a class="twitter-timeline" data-chrome="transparent" data-width="500" data-height="700" data-theme="dark" href={{jsonurldnhs}}></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
