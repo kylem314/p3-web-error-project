@@ -99,9 +99,9 @@ Tyler Cloutier
           - [Random Workout Generator Lab](76.176.107.1/aidanminilab/) demonstrates pulling different workouts with a different output each time
           - [Rest API](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api) has CRUD operations and displays it on a [webpage](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html) (I collaborated with Calvin on the API)
 ## API Section (5 points)
-- Rest API created [code](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api)
-- Front end of API [code](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html)
-- Received API from another team [link](http://127.0.0.1:5001/crossoverapi)
+- Rest API created [code](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api) (+2)
+- Front end of API [code](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html) (+1)
+- Received API from another team [link](http://127.0.0.1:5001/crossoverapi) (+2)
 
 ## Deployment Section (5 points)
 - [Commercial](https://youtu.be/HnA21yrnhtQ) (+2)
