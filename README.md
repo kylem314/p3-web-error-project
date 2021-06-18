@@ -95,6 +95,7 @@ Minilabs
         - [Use of database](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L192-L198) to store the data of users' usernames and passwords
         - [Registering system](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L221-L236) so a user can store their data and make an account on our website
         - [Login system](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L188-L219) so the data can be pulled from the database and a person can log in to their account
+        - [Messaging board](https://github.com/kylem314/p3-web-error-project/blob/8fc65ed289d672cdb448e30370427ad9b8de7e3d/templates/MessageBoard.html#L29-L71) (+0) I made before the messaging system was fully complete, but we were unable to fully implement it
         
 - Kyle Myint (4 / 5)
      - Technicals in Project (+2.5)
