@@ -100,21 +100,23 @@ Tyler Cloutier
           - [Rest API](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api) has CRUD operations and displays it on a [webpage](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html) (I collaborated with Calvin on the API)
 
 - James Hunt (5 points)
-    -Labs (+2)
+    - Labs (+2)
          - [Blueprint for battleship grid](https://github.com/kylem314/p3-web-error-project/blob/main/blueprints.py)
          - [Battleship grid](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/otherpage.html#L80-L129)
          - [Also lots of minilab/playgorund code for learning](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/jamesminilab)
          - [Moving Image Lab Test](https://github.com/kylem314/p3-web-error-project/blob/main/templates/MovingImage.html)
          - [Moving Image lab test route](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L103-L132) [and](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L80-L90)
-    -Technicals (+3)
-         -[working home page](https://github.com/kylem314/p3-web-error-project/blob/main/templates/home.html)
-         -[Working login system (made with Tyler)](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L236)
-         -[Working User system + upgraded login syste,](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L269)
-         -[Working Private messageing system](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L287)
-         -[Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L386) Do note Tyler made the try/execpt function in /blogin route
-         -[More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L46-L61)
-         -[More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/otherpage.html#L1-L179)
-         -[Working User Page integrated with Database](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/user.html#L1-L142)
+     - Technicals (+3)
+          - Each minilab utilizes classes in order to pass in parameters that cause different functions to run
+     - Technicals (+3)
+         - [working home page](https://github.com/kylem314/p3-web-error-project/blob/main/templates/home.html)
+         - [Working login system (made with Tyler)](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L236)
+         - [Working User system + upgraded login syste,](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L269)
+         - [Working Private messageing system](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L287)
+         - [Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L386) Do note Tyler made the try/execpt function in /blogin route
+         - [More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L46-L61)
+         - [More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/otherpage.html#L1-L179)
+         - [Working User Page integrated with Database](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/user.html#L1-L142)
           
 
 ## API Section (5 points)
