@@ -67,10 +67,10 @@ Calvin Ni |https://github.com/statsprojectlol |
 
 # How It's Made
 ## Theme Section (5 points)
-News page [web api](http://127.0.0.1:5001/news) (+.5 technical)
-[Messaging board](http://127.0.0.1:5001/MessageBoard) (+.5 technical +.5 user interaction +1 fun/creative)
-[Multiplayer battleship](http://127.0.0.1:5001/otherpage) (+.5 technical +.5 user interaction +1 fun/creative)
-Communicating through use of databases (+.5 user interaction)
+- News page [web api](http://127.0.0.1:5001/news) (+.5 technical)
+- [Messaging board](http://127.0.0.1:5001/MessageBoard) (+.5 technical +.5 user interaction +1 fun/creative)
+- [Multiplayer battleship](http://127.0.0.1:5001/otherpage) (+.5 technical +.5 user interaction +1 fun/creative)
+- Communicating through use of databases (+.5 user interaction)
 
 
 ## Individual Section
@@ -87,25 +87,25 @@ Minilabs
 [Bubble sort on live site])(76.176.107.1/kyleminilab/kylebubblesort)
 
 Tyler Cloutier
-Aidan Lin (5 points)
-Labs (+2)
-[Random Workout Generator Lab](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/aidanminilab/algo)
-[Bubblesort Lab](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/aidanminilab/algo)
-Technicals (+3)
-Each minilab utilizes classes in order to pass in parameters that cause different functions to run
-Minilabs uses jinja to store the output as "output" and display on the html page
-[Bubblesort Lab](76.176.107.1/aidanminilab/bubblesort) demonstrates sorting of integers
-[Bubblesort Lab](76.176.107.1/aidanminilab/bubblesort) also demonstrates sorting of strings in alphabetical order
-[Random Workout Generator Lab](76.176.107.1/aidanminilab/) demonstrates pulling different workouts with a different output each time
-[Rest API](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api) has CRUD operations and displays it on a [webpage](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html) (I collaborated with Calvin on the API)
+- Aidan Lin (5 points)
+     - Labs (+2)
+          - [Random Workout Generator Lab](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/aidanminilab/algo)
+          - [Bubblesort Lab](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/aidanminilab/algo)
+     - Technicals (+3)
+          - Each minilab utilizes classes in order to pass in parameters that cause different functions to run
+          - Minilabs uses jinja to store the output as "output" and display on the html page
+          - [Bubblesort Lab](76.176.107.1/aidanminilab/bubblesort) demonstrates sorting of integers
+          - [Bubblesort Lab](76.176.107.1/aidanminilab/bubblesort) also demonstrates sorting of strings in alphabetical order
+          - [Random Workout Generator Lab](76.176.107.1/aidanminilab/) demonstrates pulling different workouts with a different output each time
+          - [Rest API](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api) has CRUD operations and displays it on a [webpage](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html) (I collaborated with Calvin on the API)
 ## API Section (5 points)
-Rest API created [code](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api)
-Front end of API [code](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html)
-Received API from another team [link](http://127.0.0.1:5001/crossoverapi)
+- Rest API created [code](https://github.com/kylem314/p3-web-error-project/tree/main/minilabs/calvinminilab/api)
+- Front end of API [code](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/calvinminilab/api/crud.html)
+- Received API from another team [link](http://127.0.0.1:5001/crossoverapi)
 
 ## Deployment Section (5 points)
-[Commercial](https://youtu.be/HnA21yrnhtQ) (+2)
-How it’s made is the read.me (+2 and +1 visual/creativity)
+- [Commercial](https://youtu.be/HnA21yrnhtQ) (+2)
+- How it’s made is the read.me (+2 and +1 visual/creativity)
 
 
 # Mini Labs
