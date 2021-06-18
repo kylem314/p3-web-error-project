@@ -115,6 +115,7 @@ Tyler Cloutier
          - [More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L46-L61)
          - [More of Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/otherpage.html#L1-L179)
          - [Working User Page integrated with Database](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/templates/user.html#L1-L142)
+         - [Video Explination of Database I made](https://youtu.be/ekf8CcLFokk)
           
 
 ## API Section (5 points)
