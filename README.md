@@ -86,7 +86,16 @@ Minilabs
 [Bubble sort](https://github.com/kylem314/p3-web-error-project/blob/main/minilabs/kyleminilab/bubblesort.py)
 [Bubble sort on live site])(76.176.107.1/kyleminilab/kylebubblesort)
 
-Tyler Cloutier
+- Tyler Cloutier (4/5)
+    - Minilabs (+2)
+        - [Bubble Sort](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/minilabs/tylerminilab/bubblesort.py#L1-L29)
+        - [Classes (Hero Generator)](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/minilabs/tylerminilab/lab.py#L1-L57)
+    - Technicals (+2)
+        - The minilabs are use of complex algorithms to make simple outputs
+        - [Use of database](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L192-L198) to store the data of users' usernames and passwords
+        - [Registering system](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L221-L236) so a user can store their data and make an account on our website
+        - [Login system](https://github.com/kylem314/p3-web-error-project/blob/c2bb9f73201ff20bde41c76885351f6bd215780d/main.py#L188-L219) so the data can be pulled from the database and a person can log in to their account
+        
 - Kyle Myint (4 / 5)
      - Technicals in Project (+2.5)
           - [Python](https://github.com/kylem314/p3-web-error-project/blob/main/python/HtmlToPython.py) logic for battleship game with hits and misses
