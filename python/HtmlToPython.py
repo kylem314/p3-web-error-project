@@ -57,7 +57,7 @@ def HTPlen5(usermove, board, storeboard, whitemove, whitecolor, blackcolor):
                     whitepersp(whitecolor, blackcolor, board)
                 storeboard = storeboardset(board, whitemove, 1)
             else:
-                return "invalid"
+                return "Invalid"
     except Exception as e:
         return "invalid"
 
