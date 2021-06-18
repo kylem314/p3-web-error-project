@@ -108,7 +108,7 @@ Tyler Cloutier
          - [Moving Image lab test route](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L103-L132) [and](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L80-L90)
      - Technicals (+3)
          - [working home page](https://github.com/kylem314/p3-web-error-project/blob/main/templates/home.html)
-         - [Working login system (made with Tyler)](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L236)
+         - [Working login system (Tyler made the try function)](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L236)
          - [Working User system + upgraded login syste,](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L269)
          - [Working Private messageing system](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L238-L287)
          - [Working Multiplayer battleship](https://github.com/kylem314/p3-web-error-project/blob/d662ad5909352fe4b58a5c6ebe179f6f03d068b0/main.py#L188-L386) Do note Tyler made the try/execpt function in /blogin route
